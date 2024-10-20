@@ -1,169 +1,346 @@
 * {
-    /* Ensuring proper padding */
     box-sizing: border-box;
-}
-
-html {
-    /* Set a consistent font across the website */
+  }
+  
+  html {
     font-family: "Lucida Sans", sans-serif;
-}
-
-body {
+  }
+  
+  body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f8f3e9;
     margin: 0;
-    padding: 0;
-}
-
-/* Header styling */
-.header {
-    background-color: darkgrey;
-    color: rgb(15, 15, 15);
-    padding: 15px;
-    text-align: center;
-}
-
-/* Base layout using CSS grid */
-.container {
-    display: grid;
-    /* Single column layout for mobile devices */
-    grid-template-columns: 1fr;
-    grid-gap: 20px;
-    padding: 15px;
-}
-
-/* Navigation menu styling */
-.menu {
-    background-color: darkslateblue;
-    padding: 15px;
-}
-
-.menu ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.menu li {
-    padding: 8px;
-    margin-bottom: 8px;
-    background-color: darkgray;
-    color: white;
-    text-align: center;
-    box-shadow: 0 1px 3px lightgray, grey;
-    border-radius: 3px;
-}
-
-.menu a {
-    text-decoration: none;
-    color: white;
-}
-
-.menu li a:hover {
-    background-color: darkslateblue;
-    border-radius: 3px;
-}
-
-/* Main content section styling */
-.main {
-    background-color: rgb(248, 248, 248);
-    padding: 15px;
-}
-
-/* Registration form styling */
-.registrationForm {
-    background-color: #FFF;
-    padding: 20px 40px;
+  }
+  
+  .registrationForm {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    margin: 0 auto; /* Center the form horizontally */
-}
-
-.registrationForm h2 {
-    text-align: center;
-    color: #424242;
-    margin-bottom: 30px;
-}
-
-.rForm-group {
+    background-color: #ffffff;
+  }
+  
+  strong {
+    font-size: large;
+  }
+  
+  .rForm-group {
     margin-bottom: 20px;
-}
-
-label {
+  }
+  
+  label {
     display: block;
     margin-bottom: 8px;
-    color: #757575;
-}
-
-input[type="text"], 
-input[type="number"] {
+    color: #4a4e69;
+  }
+  
+  .photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    justify-items: center;
+  }
+  
+  .photo-gallery img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .centered-photo {
+    grid-column: 1 / -1;
+  }
+  
+  .photo-gallery img:hover {
+    transform: scale(1.05);
+  }
+  
+  .centered-photo {
+    grid-column: 1 / -1;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .center-photo img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .intro-text {
+    text-align: center;
+    max-width: 600px;
+    line-height: 1.6;
+  }
+  
+  .photo-gallery img.photo7 {
+    height: 180px; /* Adjust height for photo7 to make it longer */
+  }
+  
+  .intro-container {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .profile-photo {
+    width: 150px; /* Lebar 3 unit */
+    height: 200px; /* Tinggi 4 unit */
+    object-fit: cover; /* Memastikan gambar tetap proporsional dan tidak terdistorsi */
+    border-radius: 10px;
+  }
+  
+  .intro-text {
+    flex: 2 1 300px;
+  }
+  
+  .photo-gallery img {
+    width: 150px; /* Fixed width for all images */
+    height: 150px; /* Default height */
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .photo-gallery img:hover {
+    transform: scale(1.05);
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="number"] {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #bdbdbd;
+    padding: 10px;
+    border: 1px solid #c6b59a;
     border-radius: 4px;
-    font-size: 16px;
-    transition: border-color 0.2s ease;
-}
-
-input[type="text"]:focus,
-input[type="number"]:focus {
-    border-color: purple;
+    box-sizing: border-box;
+  }
+  
+  input[type="text"]:focus,
+  input[type="date"]:focus,
+  input[type="tel"]:focus,
+  input[type="email"]:focus,
+  input[type="number"]:focus {
+    border-color: #7a9a9f;
     outline: none;
-}
-
-.btn-submit {
+  }
+  
+  .btn-submit {
     width: 100%;
     padding: 12px;
-    margin-top: 20px;
     font-size: 16px;
-    background-color: purple;
+    background-color: #7a9a9f;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
-
-.btn-submit:hover {
-    background-color: #3700b3;
-}
-
-/* Right sidebar styling */
-.aside {
-    background-color: darkslateblue;
+  }
+  
+  .btn-submit:hover {
+    background-color: #4a4e69;
+  }
+  
+  .main {
+    text-align: center;
+    background-color: rgb(248, 248, 248);
+    padding: 15px;
+  }
+  
+  .social-media {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 25px;
+  }
+  .social-media li {
+    margin-right: 20px;
+  }
+  .social-media img {
+    width: 48px;
+    height: 48px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .custom-list {
+    list-style-type: none;
+  }
+  
+  .custom-list li::before {
+    content: "•";
+    font-size: 20px;
+    color: #4a4e69;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-right: 10px;
+    line-height: 1.6;
+  }
+  
+  .header {
+    background-color: #c6b59a;
+    color: white;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    padding: 15px;
+  }
+  
+  .menu {
+    background-color: #c17878;
+    padding: 15px;
+  }
+  
+  .menu ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .menu li {
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: #c6b59a;
+    color: white;
+    text-align: center;
+    box-shadow: 0 1px 3px lightgray, grey;
+    border-radius: 3px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .menu li:hover {
+    background-color: #4a4e69;
+  }
+  
+  .aside {
+    background-color: #c17878;
     color: white;
     padding: 15px;
     text-align: center;
     font-size: 14px;
     box-shadow: 0 1px 3px lightgray, grey;
-}
-
-/* Footer section styling */
-.footer {
-    background-color: darkgrey;
+  }
+  
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo-container img {
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-right: 10px;
+    border-radius: 5px;
+  }
+  
+  .logo-container a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .logo-container a:hover {
+    color: #007bff;
+  }
+  
+  .footer {
+    background-color: #c6b59a;
     color: white;
     padding: 15px;
     text-align: center;
     font-size: 11px;
-}
-
-/* Image responsiveness */
-.responsive-img {
+  }
+  
+  .responsive-img {
+    align-content: center;
     width: 100%;
     height: auto;
-    max-width: 100%;
+    max-width: 200px;
+    aspect-ratio: 3 / 4;
     border-radius: 10px;
-}
-
-/* Media query for larger screen sizes (min-width: 700px) */
-@media only screen and (min-width: 700px) {
+  }
+  
+  @media only screen and (min-width: 700px) {
     .container {
-        /* Three-column layout for larger screens */
-        grid-template-columns: 1fr 2fr 1fr;
+      flex-direction: column;
+      grid-template-columns: 1fr 2fr 1fr;
     }
-
+    .photo-gallery {
+      grid-template-columns: repeat(2, 1fr);
+  }
+  
     .responsive-img {
-        max-width: 680px;
-        display: block;
-        margin: 0 auto;
+      max-width: 680px;
+      display: block;
     }
+  }
+
+  .photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
 }
+
+.photo-gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.centered-photo {
+    grid-column: 2;
+}
+
+.links {
+  color: #00dcb4; /* Warna ungu */
+  text-decoration: none; /* Menghilangkan garis bawah */
+  padding: 5px; /* Menambahkan padding agar border-radius terlihat */
+  transition: all 0.3s ease; /* Animasi transisi */
+  font-size: medium;
+  font-weight: bold;
+}
+
+.links:hover {
+  color: #1d00dc; /* Warna ungu lebih terang saat dihover */
+  text-decoration: underline; /* Menambahkan garis bawah saat dihover */
+  border: 1px solid #9B30FF; /* Menambahkan border saat dihover */
+  border-radius: 5px; /* Border radius 5px saat dihover */
+
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid black; /* Warna panah */
+  margin: 20px auto; /* Menempatkan di tengah */
+}
+

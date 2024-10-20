@@ -3,88 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrasi-form</title>
-    <link rel="icon" href="images.jpeg">
-    <style>
-        body {
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .registration-form {
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-        }
-        .registration-form h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: magenta(254, 18, 211);
-        }
-        .form-group {
-            margin-bottom: 30px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: black
-        }
-        .form-group input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #757575;
-            border-radius: 5px;
-        }
-        .form-group button {
-            padding: 10px 60px;
-            background-color: magenta;
-            border: none;
-            color: #fff;
-            font-weight: bold;
-            border-radius: 5px;
-            cursor: pointer;
-            display: block;
-            margin: 0 auto;
-        }
-        .form-group button:hover {
-            background-color: magenta;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>Registration-form</title>
 </head>
 <body>
-
-    <div class="registration-form">
-        <h2>Registration Form</h2>
-        <form action="process.php" method="POST">
-            <div class="form-group">
-                <label for="nama">Nama :</label>
-                <input type="text" id="nama" name="nama" required>
-            </div>
-            <div class="form-group">
-                <label for="nim">NIM :</label>
-                <input type="text" id="nim" name="nim" required>
-            </div>
-            <div class="form-group">
-                <label for="no_hp">No HP :</label>
-                <input type="text" id="no_hp" name="no_hp" required>
-            </div>
-            <div class="form-group">
-                <label for="no_makan">No Makan :</label>
-                <input type="text" id="no_makan" name="no_makan" required>
-            </div>
-            <div class="form-group">
-                <button type="submit">Daftar</button>
-            </div>
-        </form>
+    <div class="header">
+        <h1>Registration-form</h1>
     </div>
 
+    <div class="container">
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about page.html">About Me</a></li>
+                <li><a href="myHoliday.html">My Holiday</a></li>
+                <li><a href="RegistrasiFieldtrip-ElsaYunitaSihotang-2382011.html">Registration Form</a></li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <h2><p><center>Field Trip Registration</center></p></h2>
+            <div class="registrationForm">
+                <form action="/submit_registration" method="POST">
+                    <div class="rForm-group">
+                        <label for="name">Nama Lengkap</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="rForm-group">
+                        <label for="birthdate">Tanggal Lahir</label>
+                        <input type="date" id="birthdate" name="birthdate" required>
+                    </div>
+                    <div class="rForm-group">
+                        <label for="phone">Nomor Telepon</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="rForm-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="rForm-group">
+                        <label for="address">Alamat</label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+                    <div class="rForm-group">
+                        <label for="city">Kota</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                    <div class="rForm-group">
+                        <label for="postal-code">Kode Pos</label>
+                        <input type="text" id="postal-code" name="postal-code" required>
+                    </div>
+                    <button type="submit" class="btn-submit">Daftar</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="aside">
+            <h2>My Portofolio</h2>
+            <p>
+                a journey of a thousand miles starts with a small step.
+            </p>
+            <h3>Contact Me</h3>
+            <div class="arrow-down"></div>
+                <a href="https://instagram.com/hii.elsaa20" class="links"
+                    target="_blank" >Instagram</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>
+            Elsa Yunita Sihotang:)
+        </p>
+    </div>
 </body>
 </html>
